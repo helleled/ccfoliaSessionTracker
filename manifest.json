@@ -1,0 +1,55 @@
+{
+  "manifest_version": 2,
+  "name": "CCFOLIA 세션 룸 저장 및 기록",
+  "version": "1.0.9",
+  "description": "CCFOLIA 세션 방문 기록을 저장하고 관리합니다",
+  
+  "permissions": [
+    "storage",
+    "tabs",
+    "clipboardWrite",
+    "contextMenus",
+    "*://ccfolia.com/*",
+    "*://*.ccfolia.com/*"
+  ],
+  
+  "content_scripts": [
+    {
+      "matches": [
+        "*://ccfolia.com/*",
+        "*://*.ccfolia.com/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ],
+  
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "helleledangel@gmail.com",
+      "strict_min_version": "78.0"
+    }
+  },
+  
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon-16.png",
+      "48": "icon-48.png",
+      "128": "icon-128.png"
+    },
+    "default_title": "CCFOLIA Session Tracker"
+  },
+  
+  "icons": {
+    "16": "icon-16.png",
+    "48": "icon-48.png",
+    "128": "icon-128.png"
+  }
+}

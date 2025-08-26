@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <div class="popup-header">
+      <h1>코코포리아 룸 저장 및 기록</h1>
+    </div>
+    
+    <div class="quick-stats">
+      <div class="stat">
+        <span class="stat-value" id="quick-total">0</span>
+        <span class="stat-label">세션</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value" id="quick-today">0</span>
+        <span class="stat-label">오늘</span>
+      </div>
+    </div>
+    
+    <div class="popup-actions">
+      <button id="open-dashboard" class="action-btn primary">
+        대시보드 열기
+      </button>
+      <button id="open-ccfolia" class="action-btn">
+        CCFOLIA 열기
+      </button>
+    </div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
